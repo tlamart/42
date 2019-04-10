@@ -1,0 +1,36 @@
+" SET LEADER & LOCALLEADER for mapping
+
+	let mapleader = ","
+	let maplocalleader = "\\"
+
+" BASIC SETTINGS
+
+	syntax on
+	set nu
+	set rnu
+	set autoindent 
+	set tabstop=4
+	set mouse=a
+	set backupdir=~/.vim
+
+" MAPING & ABBREV
+
+" edit & source .vimrc
+	nnoremap <leader>ev :split $MYVIMRC<cr>
+	nnoremap <leader>sv :source $MYVIMRC<cr>
+" unclassified yet
+	inoremap <leader><c-u> <esc>viwUi
+	inoremap <leader><c-z> <esc>ui
+	nnoremap <leader>d dd
+	inoremap <leader>main int<tab><tab>main(int ac, char **av)<cr>{}<left><cr><cr><up><tab>
+	iabbrev @@ tlamart@student.42.fr
+	nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
+	nnoremap <leader>' viw<esc>a'<esc>bi'esc>lel
+	nnoremap L $
+	nnoremap H 0
+	inoremap jk <esc>
+
+" AUTOCMD
+
+" .c file
+	autocmd FileType c noremap <buffer> <localleader>c i//
