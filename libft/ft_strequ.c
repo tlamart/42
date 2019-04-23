@@ -6,7 +6,7 @@
 /*   By: tlamart <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 11:28:20 by tlamart           #+#    #+#             */
-/*   Updated: 2018/11/26 09:44:58 by tlamart          ###   ########.fr       */
+/*   Updated: 2019/04/23 17:44:16 by tlamart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,5 @@ int		ft_strequ(char const *s1, char const *s2)
 {
 	if (!s1 || !s2)
 		return (-1);
-	if (ft_strcmp(s1, s2))
-		return (0);
-	return (1);
+	return (!ft_strcmp(s1, s2));
 }

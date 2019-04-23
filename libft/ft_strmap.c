@@ -6,7 +6,7 @@
 /*   By: tlamart <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 10:46:12 by tlamart           #+#    #+#             */
-/*   Updated: 2018/11/20 22:03:24 by tlamart          ###   ########.fr       */
+/*   Updated: 2019/04/23 17:26:05 by tlamart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,9 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	char	*str;
 	int		i;
 
+	if (!s || !(*f) || !(str = ft_strnew(ft_strlen(s))))
+		return (NULL);
 	i = 0;
-	if (!s)
-		return (NULL);
-	if (!(str = ft_strnew(ft_strlen(s))))
-		return (NULL);
 	while (s[i])
 	{
 		str[i] = (*f)(s[i]);

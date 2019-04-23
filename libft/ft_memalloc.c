@@ -6,7 +6,7 @@
 /*   By: tlamart <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 09:53:26 by tlamart           #+#    #+#             */
-/*   Updated: 2019/04/23 14:36:52 by tlamart          ###   ########.fr       */
+/*   Updated: 2019/04/23 16:27:22 by tlamart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	*ft_memalloc(size_t size)
 {
-	char	*mem;
+	void	*mem;
 	size_t	i;
 
 	i = 0;
@@ -23,7 +23,7 @@ void	*ft_memalloc(size_t size)
 		return (NULL);
 	while (i < size)
 	{
-		mem[i] = 0;
+		*(char*)(mem + i) = 0x00;
 		i++;
 	}
 	return (mem);
