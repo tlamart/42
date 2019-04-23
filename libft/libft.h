@@ -6,14 +6,14 @@
 /*   By: tlamart <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 14:35:09 by tlamart           #+#    #+#             */
-/*   Updated: 2019/04/22 09:42:27 by tlamart          ###   ########.fr       */
+/*   Updated: 2019/04/22 12:18:30 by tlamart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <string.h>
-# define BUFF_SIZE 2048
+# define BUFF_SIZE 1
 
 typedef struct	s_list
 {
@@ -93,6 +93,6 @@ int				ft_printf(const char *format, ...);
 int				ft_usage(char *str);
 void			ft_putnbrnl(int nb);
 int				ft_lstnl(t_list **list, const void *content, size_t content_size);
-void			ft_lstcreate(void *content, size_t content_size);
+t_list			*ft_lstcreate(void *content, size_t content_size);
 
 #endif
