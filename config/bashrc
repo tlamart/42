@@ -1,0 +1,11 @@
+alias gcl='git clone'
+alias gp='git push'
+alias gc='git commit'
+alias ga='git add'
+alias cc='clang -Wall -Wextra -Werror'
+
+alias ls='ls -G'
+alias grep='grep --colour'
+
+export MAIL='tlamart@student.42.fr'
+export USER='tlamart'
