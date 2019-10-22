@@ -79,3 +79,6 @@ int		main(void)
 	
 	ft_strdup(); strdup();
 	// check strdup
+	
+	return (0);
+}
